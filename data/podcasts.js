@@ -233,5 +233,3 @@ const appearances = [
 //     lang: 'pt-BR',
 //   },
 ]
-
-export { bytetalk, appearances, zofe }
