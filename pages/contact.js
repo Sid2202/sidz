@@ -6,7 +6,7 @@ import Toast from '../components/Toast'
 import { Box } from '../components/Box'
 import { styled } from '../stitches.config'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   

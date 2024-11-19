@@ -2,6 +2,8 @@ import { styled } from '../stitches.config'
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic';
+import Image from 'next/image'
+
 
 // import Lottie from 'lottie-react'
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
@@ -27,7 +29,7 @@ export default function FeaturedProject(props) {
         /> */}
         <Body>
           <Preview>
-            <img src= {`/static${project.preview}`} alt={project.title} />
+            <Image src= {`/static${project.preview}`} alt={project.title} layout="fill" objectFit="cover"  />
           </Preview>
           <Title>{project.title}</Title>
           <Description>{project.description}</Description>

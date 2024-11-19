@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Base from '../layouts/Base'
 import { Box } from '../components/Box'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   
   if (!isPageEnabled) {

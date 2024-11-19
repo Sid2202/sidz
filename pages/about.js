@@ -17,7 +17,7 @@ import dynamic from 'next/dynamic';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const meta = {
     title: 'About // Sidhanti Patil',
     description:

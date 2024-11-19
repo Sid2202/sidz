@@ -48,7 +48,7 @@ function Post(props) {
   )
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   
   if (!isPageEnabled) {

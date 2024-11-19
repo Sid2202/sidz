@@ -4,7 +4,7 @@ import Base from '../layouts/Base'
 import stripHtml from '../lib/strip-html'
 import categories from '../data/uses'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   
   if (!isPageEnabled) {
@@ -69,7 +69,6 @@ function Uses(props) {
 
       <p dangerouslySetInnerHTML={{ __html: description }} />
 
-      {renderAll()}
     </>
   )
 }

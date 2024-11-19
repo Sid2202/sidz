@@ -8,7 +8,7 @@ import FeaturedTalk from '../components/FeaturedTalk'
 import stripHtml from '../lib/strip-html'
 import items from '../data/talks'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   
   if (!isPageEnabled) {

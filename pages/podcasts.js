@@ -6,7 +6,7 @@ import ListItem from '../components/ListItem'
 import { ListGroup } from '../components/ListGroup'
 import { AnimateSharedLayout } from 'framer-motion'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const isPageEnabled = false; // Set this flag to `true` when you want to enable the page
   
   if (!isPageEnabled) {
