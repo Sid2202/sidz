@@ -3,50 +3,51 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic';
 
-export default function FeaturedProject(props) {
+export default function FeaturedEvent(props) {
   const { project } = props
 
 
   return (
-    <Event
-      href={project.url}
-      target="_blank"
-    >
-      {/* <Animation index={props.index}> */}
-        <Body>
-          <Preview>
-            <img src= {`/static${project.preview}`} alt={project.title} />
-          </Preview>
-          <Title>{project.title}</Title>
-          <Description>{project.description}</Description>
-        </Body>
-      {/* </Animation> */}
-    </Event>
+    // <Event
+    //   href={project.url}
+    //   target="_blank"
+    // >
+    //   {/* <Animation index={props.index}> */}
+    //     <Body>
+    //       <Preview>
+    //         <img src= {`/static${project.preview}`} alt={project.title} />
+    //       </Preview>
+    //       <Title>{project.title}</Title>
+    //       <Description>{project.description}</Description>
+    //     </Body>
+    //   {/* </Animation> */}
+    // </Event>
+    <h1></h1>
   )
 }
 
-function Animation(props) {
-  const [hovered, setHovered] = useState('')
-  const isHovered = hovered === props.index
+// function Animation(props) {
+//   const [hovered, setHovered] = useState('')
+//   const isHovered = hovered === props.index
 
-  return (
-    <AnimContainer
-      onHoverStart={() => setHovered(props.index)}
-      onHoverEnd={() => setHovered('')}
-    >
-      {isHovered && (
-        <AnimHovered
-          layoutId="featuredProjects"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
-      )}
+//   return (
+//     <AnimContainer
+//       onHoverStart={() => setHovered(props.index)}
+//       onHoverEnd={() => setHovered('')}
+//     >
+//       {isHovered && (
+//         <AnimHovered
+//           layoutId="featuredProjects"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//         />
+//       )}
 
-      {props.children}
-    </AnimContainer>
-  )
-}
+//       {props.children}
+//     </AnimContainer>
+//   )
+// }
 
 const Project = styled('a', {
   display: 'flex',
