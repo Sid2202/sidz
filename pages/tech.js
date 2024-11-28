@@ -32,8 +32,6 @@ function Tech(props) {
         <meta content="https://sidzzz.com/projects" property="og:url" />
         <meta content={`https://sidzzz.com${image}`} property="og:image" />
       </Head>
-
-      
 {/* 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} /> */}
