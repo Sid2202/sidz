@@ -13,7 +13,7 @@ export default function Navbar() {
     'Projects',
     'Resume',
     'Tech',
-    'Life',
+    'Gallery',
     // 'Talks',
     // 'Podcasts',
     // 'Investing',

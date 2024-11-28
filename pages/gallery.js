@@ -5,11 +5,11 @@ import Base from '../layouts/Base'
 import { min } from 'date-fns'
 import { styled } from '../stitches.config'
 import stripHtml from '../lib/strip-html'
-import FeaturedEvents from '../components/FeaturedEvents'
+import GalleryGrid from '../components/GalleryGrid'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Tech // Sidhanti Patil',
+    title: 'Gallery // Sidhanti Patil',
     tagline: 'Meh .',
     primaryColor: 'cyan',
     secondaryColor: 'green',
@@ -18,7 +18,20 @@ export async function getStaticProps() {
   return { props: meta }
 }
 
-function Tech(props) {
+const GalleryWrapper = styled('div', {
+  padding: '2rem', // Desktop default
+  '@media (max-width: 1024px)': {
+    padding: '1.5rem', // Tablet
+  },
+  '@media (max-width: 768px)': {
+    padding: '1rem', // Mobile
+  },
+  '@media (max-width: 480px)': {
+    padding: '0.5rem', // Phones
+  },
+});
+
+function Gallery(props) {
   const { title, image } = props
   const description = ''
 
@@ -32,18 +45,19 @@ function Tech(props) {
         <meta content="https://sidzzz.com/projects" property="og:url" />
         <meta content={`https://sidzzz.com${image}`} property="og:image" />
       </Head>
-{/* 
+
+      A curated gallery of my daily life.
       <AnimateSharedLayout>
-        <p dangerouslySetInnerHTML={{ __html: description }} /> */}
-
-        {/* <FeaturedEvents></FeaturedEvents> */}
-
-      {/* </AnimateSharedLayout> */}
+        <p dangerouslySetInnerHTML={{ __html: description }} /> 
+        <GalleryWrapper>
+          <GalleryGrid />
+        </GalleryWrapper>
+      </AnimateSharedLayout>
 
     </>
   )
 }
 
-Tech.Layout = Base
+Gallery.Layout = Base
 
-export default Tech
+export default Gallery
